@@ -6,6 +6,7 @@ from magic_squares.utils import is_correct
 
 
 def test():
+    # Simple test of a 4x4 magic square
     n = 4
     grid = [[0 for i in range(n)] for j in range(n)]
 

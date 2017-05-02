@@ -8,12 +8,13 @@ def solve(grid):
 
     assert is_valid(grid)
 
-    # Creates the solver.
+    # Create the solver.
     solver = pywrapcp.Solver("magic-squares")
 
     variables = [[None for i in range(n)] for j in range(n)]
     exp_sum = expected_sum(n)
 
+    # Create all variables
     for i in range(n):
         for j in range(n):
             if grid[i][j] == 0:
