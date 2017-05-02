@@ -1,4 +1,5 @@
 from collections import Counter
+from itertools import chain
 
 
 def expected_sum(n):
@@ -9,10 +10,9 @@ def is_valid(grid):
     n = len(grid)
     exp_sum = expected_sum(n)
 
-    for i in range(n):
-        for j in range(n):
-            if grid[i][j] < 0 or grid[i][j] > exp_sum:
-                return False
+    for x in chain(*grid):
+        if x < 0 or x > exp_sum:
+            return False
 
     return True
 
