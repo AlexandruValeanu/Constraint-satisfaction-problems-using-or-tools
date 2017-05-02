@@ -1,4 +1,4 @@
-import sudoku.test
+import nqueens.test
 
 if __name__ == '__main__':
-    sudoku.test.test()
+    nqueens.test.test()
